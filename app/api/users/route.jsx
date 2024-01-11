@@ -1,6 +1,6 @@
 import { users } from "@/app/util/db";
 import { NextResponse } from "next/server";
-import fs from "fs";
+import { writeUsersToFile } from "@/app/util/fileUtils";
 
 // 1. Get all users data
 export async function GET() {
@@ -23,18 +23,8 @@ export async function POST(req, res) {
   // add new user to in-memory array
   users.push({ id, name, email, password });
 
-  // extract just user array from the updated data\
-  const updatedUsersArray = users;
-
-  // convert updated users array to JSON string
-  const updatedData = JSON.stringify(updatedUsersArray, null, 2);
-
-  // Write updated users array to a db.js file
-  fs.writeFileSync(
-    "./app/util/db.js",
-    `export const users = ${updatedData}`,
-    "utf-8"
-  );
+  // Write updated users array to db.js file
+  writeUsersToFile(users)
 
   return NextResponse.json({ success: "User successfully created." });
 }
@@ -60,18 +50,8 @@ export async function PUT(req, res) {
     users[userIndex].password = password;
   }
 
-  // extract just user array from the updated data\
-  const updatedUsersArray = users;
-
-  // convert updated users array to JSON string
-  const updatedData = JSON.stringify(updatedUsersArray, null, 2);
-
-  // Write updated users array to a db.js file
-  fs.writeFileSync(
-    "./app/util/db.js",
-    `export const users = ${updatedData}`,
-    "utf-8"
-  );
+  // Write updated users array to db.js file
+  writeUsersToFile(users)
 
   return NextResponse.json({ success: "User successfully updated." });
 }

@@ -1,12 +1,5 @@
 export const users = [
   {
-    "id": "1",
-    "name": "I",
-    "age": 20,
-    "email": "I@gmail.com",
-    "password": "I123"
-  },
-  {
     "id": "2",
     "name": "B",
     "age": 21,
@@ -48,9 +41,15 @@ export const users = [
     "password": "G123"
   },
   {
-    "id": "8",
-    "name": "H",
-    "email": "H@gmail.com",
-    "password": "H123"
+    "id": "1",
+    "name": "I",
+    "email": "I@gmail.com",
+    "password": "I123"
+  },
+  {
+    "id": "9",
+    "name": "J",
+    "email": "J@gmail.com",
+    "password": "J123"
   }
 ]
