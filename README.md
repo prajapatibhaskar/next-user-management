@@ -1,1 +1,1 @@
-# next-user-management
+# Next User Management
