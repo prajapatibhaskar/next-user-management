@@ -8,7 +8,7 @@ export async function GET(req, res) {
 
   const user = users.filter((user) => user.id === id);
 
-  return NextResponse.json({ user });
+  return NextResponse.json({ user, ok: true });
 }
 
 // 3. Login
