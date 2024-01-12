@@ -14,7 +14,7 @@ const AllUsers = () => {
     };
 
     fetchAllUsers()
-  });
+  }, []);
 
   return (
     <div>
