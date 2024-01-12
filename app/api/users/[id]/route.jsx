@@ -1,5 +1,6 @@
 import { users } from "@/app/util/db";
 import { NextResponse } from "next/server";
+import { writeUsersToFile } from "@/app/util/fileUtils";
 
 // 2. Get specific user by id
 export async function GET(req, res) {

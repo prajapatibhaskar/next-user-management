@@ -26,30 +26,5 @@ export const users = [
     "age": 24,
     "email": "E@gmail.com",
     "password": "E123"
-  },
-  {
-    "id": "6",
-    "name": "F",
-    "age": 25,
-    "email": "F@gmail.com",
-    "password": "F123"
-  },
-  {
-    "id": "7",
-    "name": "G",
-    "email": "G@gmail.com",
-    "password": "G123"
-  },
-  {
-    "id": "1",
-    "name": "I",
-    "email": "I@gmail.com",
-    "password": "I123"
-  },
-  {
-    "id": "9",
-    "name": "J",
-    "email": "J@gmail.com",
-    "password": "J123"
   }
 ]
